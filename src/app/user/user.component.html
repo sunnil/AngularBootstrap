@@ -1,0 +1,15 @@
+<div class="col-12 col-sm-8 col-md-6 offset-sm-2 offset-md-3">
+<h2>{{pagetitle}}</h2>
+<form [formGroup]="myform" novalidate (ngSubmit)="onSubmit()">
+    <div class="form-group has-danger">
+      <input type="text" class="form-control" formControlName="first_name" id="first_name" #first_name [(ngModel)] = "myform.first_name">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" formControlName="last_name" id="last_name" #last_name [(ngModel)] = "myform.last_name">
+      </div>
+      <div class="form-group">
+        <input type="hidden" formControlName="id" id="id" #id [(ngModel)] = "myform.id">
+        <button type="submit" class="btn btn-primary btn-sm">Save</button>
+      </div>
+  </form>
+</div>
